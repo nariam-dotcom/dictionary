@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search definitions, pronunciation, and synonyms with Wordly Dictionary.">
+  <title>Wordly | Dictionary</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo" aria-label="Wordly home">Wordly<span>.</span></a>
+    <button id="theme-toggle" class="theme-toggle"
+      type="button" aria-label="Switch to dark theme">
+      🌙 Dark mode
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL DICTIONARY</p>
+      <h1>Discover the meaning<br>of <span>every word.</span></h1>
+      <p class="subtitle">
+        Explore definitions, pronunciation, examples, and synonyms.
+      </p>
+
+      <form id="search-form" class="search-form">
+        <label for="word-input" class="sr-only">Enter a word</label>
+        <input
+          type="search"
+          id="word-input"
+          placeholder="Enter a word, e.g. beautiful"
+          aria-label="Word to search"
+          required
+        >
+        <button type="submit" id="search-button">Search</button>
+      </form>
+
+      <p id="status-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="results-section" aria-label="Dictionary results">
+      <div id="word-result"></div>
+    </section>
+
+    <section class="favorites-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2>Favorite words</h2>
+        </div>
+        <span id="favorite-count" class="favorite-count">0 saved</span>
+      </div>
+
+      <ul id="favorites-list" class="favorites-list">
+        <li class="empty-favorites">
+          Your favorite words will appear here.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Wordly Dictionary , Learn a new word every day.</p>
+    <p>
+      Definitions provided by
+      <a href="https://dictionaryapi.dev/" target="_blank"
+        rel="noopener noreferrer">Free Dictionary API</a>.
+    </p>
+  </footer>
+</body>
+</html>
